@@ -1,0 +1,14 @@
+
+############# Python Location ###################
+
+C:\Users\Narasimha\AppData\Local\Continuum\anaconda3>
+
+################# MySQL Location #################
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+
+
+Narasimha@123
+
+python -m pip install --upgrade pip
+

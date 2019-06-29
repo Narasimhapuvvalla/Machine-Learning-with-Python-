@@ -1,0 +1,9 @@
+narasimhap2193@gmaail.com
+Narasimha@12345
+
+c/Users/Venka/AppData/Local/Programs/Python/Python37-64/
+same as conda
+
+https://www.kaggle.com/rnmehta5/pima-indian-diabetes-binary-classification
+https://github.com/michaeldorner/DecisionTrees/blob/master/03_Python%20Code/implementation.py
+https://github.com/susanli2016/Machine-Learning-with-Python

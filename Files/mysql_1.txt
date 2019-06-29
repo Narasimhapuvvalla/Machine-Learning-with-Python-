@@ -1,0 +1,100 @@
+################# MySQL #############################
+
+Connecting to MySQL is made very easy with the RMySQL package. To connect to a MySQL database simply 
+install the package and load the library.
+
+install.packages("RMySQL")
+library(RMySQL)
+
+library(RMySQL)
+library(psych)
+con <- dbConnect(MySQL(),
+                 user = 'root',
+                 password = 'Narasimha@123',
+                 host = 'localhost',
+                 dbname=' ')
+dbListTables(con)
+dbDisconnect(con)
+df=dbSendQuery(con,"select * from actor")
+df=dbGetQuery(con,"select * from actor")
+
+
+
+Connecting to MySQL:
+Once the RMySQL library is installed create a database connection object.
+
+mydb = dbConnect(MySQL(), user='user', password='password', dbname='database_name', host='host')
+
+Listing Tables and Fields:
+Now that a connection has been made we list the tables and fields in the database we connected to.
+
+dbListTables(mydb)
+
+This will return a list of the tables in our connection. 
+
+dbListFields(mydb, 'some_table')
+
+This will return a list of the fields in some_table.
+
+Running Queries:
+Queries can be run using the dbSendQuery function.
+
+dbSendQuery(mydb, 'drop table if exists some_table, some_other_table')
+
+In my experience with this package any SQL query that will run on MySQL will run using this method.
+
+Making tables:
+We can create tables in the database using R dataframes.
+
+dbWriteTable(mydb, name='table_name', value=data.frame.name)
+
+Retrieving data from MySQL:
+To retrieve data from the database we need to save a results set object.
+
+rs = dbSendQuery(mydb, "select * from some_table")
+
+I believe that the results of this query remain on the MySQL server, to access the results in R we need to use the fetch function.
+
+data = fetch(rs, n=-1)
+
+This saves the results of the query as a data frame obj
+
+ect. The n in the function specifies the number of records to retrieve, using n=-1 retrieves all pending records.
+
+#################################################################################################
+
+Create Database
+CREATE DATABASE is the SQL command for creating a database. 
+
+CREATE DATABASE movies; 
+
+ #   Connection to mysql 
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin
+
+id 
+user name
+pass 
+email 
+CREATE TABLE user <id int<10> unsigned auto_increment primary key NOT NULL,username VARCHAR<25> NOTNULL,pass VARCHAR<25> NOT NULL ,email VARCHAR<25> NOT NULL>
+
+
+DELETE FROM user
+WHERE ="2"AND CategoryID="3" AND CategoryID="5";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

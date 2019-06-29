@@ -1,0 +1,39 @@
+################# Data Import ############################
+
+# csv files 
+
+train = pd.read_csv("C:\\Users\\Narasimha\\Desktop\\NLP_Files54b6bbb\\NLP_Files\\train.csv")
+
+# excel files 
+
+import pandas as pd
+
+df = pd.read_excel ("C:\\Users\\Narasimha\\Desktop\\NLP_Files54b6bbb\\NLP_Files\\train.xlsx") #for an earlier version of Excel, you may need to use the file extension of 'xls'
+print (df)
+
+#
+import os
+import pymysql
+import pandas as pd
+
+host = os.getenv('localhost')
+port = os.getenv('3306')
+user = os.getenv('root')
+password = os.getenv('Narasimha@123')
+database = os.getenv('sakila')
+
+
+
+
+conn = pymysql.connect(
+    host=host,
+    port=int(3306),
+    user="root",
+    passwd=password,
+    db="[sakila]",
+    charset='utf8mb4')
+
+df = pd.read_sql_query("SELECT * FROM YOUR_TABLE",
+    conn)
+df.tail(10)
+ 
